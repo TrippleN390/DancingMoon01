@@ -6,16 +6,18 @@
     </head>
     <body>
         <header id="header">
-            <a href="#" class="logo">Jungle</a>
+            <a href="#" class="logo">E-ZONE</a>
             <ul>
                 <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Destination</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="https://www.bbc.co.uk/news" target=”_blank” class="active">About</a></li>
+                <li><a href="#" class="active">Work</a></li>
+                <li><a href="#" class="active">Contact</a></li>
             </ul>
             </header>
             <section>
-                <h2 id="text"><span>It's time for a new</span><br>Adventure</h2>
+                <h2 id="text">A higher form of shopping</h2>
+                <img src="stars.png" id="stars">
+                <img src="moon.png" id="moon">
                 <img src="bird1.png" id="bird1">
                 <img src="bird2.png" id="bird2">
                 <img src="forest.png" id="forest">
@@ -30,18 +32,25 @@
 
             <script>
                 let text = document.getElementById('text');
+                let moon = document.getElementById('moon');
+                let stars = document.getElementById('stars');
                 let bird1 = document.getElementById('bird1');
                 let bird2 = document.getElementById('bird2');
                 let btn = document.getElementById('btn');
                 let rocks = document.getElementById('rocks');
                 let forest = document.getElementById('forest');
                 let water = document.getElementById('water');
-                let header = document.getElementById('header');
+                /*let header = document.getElementById('header');*/
+                let header = document.querySelector('header');
 
                 window.addEventListener('scroll', function(){
                     let value = window.scrollY;
 
-                    text.style.top = 50 + value * -0.5 + '%';
+                    /*text.style.top = 50 + value * -0.5 + '%';*/
+                    text.style.marginLeft = value * 4 + 'px';
+                    text.style.marginTop = value * 1.5 + 'px';
+                    stars.style.left = value * 0.25 + 'px';
+                    moon.style.left = value * 1.05 + 'px';
                     bird1.style.top = value * -1.5 + 'px';
                     bird1.style.left = value * 2 + 'px';
                     bird2.style.top = value * -1.5 + 'px';
@@ -50,6 +59,7 @@
                     rocks.style.top = value * -0.12 + 'px';
                     forest.style.top = value * 0.25 + 'px';
                     header.style.top = value * 0.5 + 'px';
+              
                 })
             </script>
     </body>

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@1,300;1,400&family=Roboto:wght@100&display=swap');
 *
 {
     margin: 0;
@@ -10,7 +10,7 @@
 body 
 {
     overflow-x: hidden; 
-    background: #fff;
+    background: linear-gradient(#2b1055,#7597de);
     min-height: 100vh;
 }
 #header 
@@ -27,10 +27,11 @@ body
 }
 #header .logo
 {
-    color: #094b65;
+    color: #FFFAE4;
     font-weight: 700;
     font-size: 2em;
     text-decoration: none;
+    text-transform: uppercase;
 }
 #header ul
 {
@@ -47,13 +48,13 @@ body
 {
     text-decoration: none;
     padding: 6px 15px;
-    color: #094b65;
+    color: #fff;
     border-radius: 20px;
 }
 #header ul li a:hover,
 #header ul li a.active
 {
-    background: #094b65;
+    background: #CF9FFF;
     color: #fff;
 }
 section 
@@ -86,22 +87,28 @@ section img
     object-fit: cover;
     pointer-events: none;
 }
+section img#moon
+{
+    mix-blend-mode: screen;
+}
 section #text
 {
     position: absolute;
-    color: #094b65;
-    font-size: 10vw;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: 9;
     text-align: center;
     line-height: 0.55em;
     font-family: 'Rancho', cursive;
-    transform: translateY(-50%);
+    transform: translateY(-35%);
 }
 section #text span
 {
     font-size: 0.20em;
     letter-spacing: 2px;
     font-weight: 400;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Jost', sans-serif;
 }
 #btn 
 {
@@ -110,7 +117,7 @@ section #text span
         display: inline-block;
         padding: 8px 30px;
         background: #fff;
-        color: #094b65;
+        color: #2b1055;
         font-size: 1.2em;
         font-weight: 500;
         letter-spacing: 2px;
