@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@1,300;1,400&family=Roboto:wght@100&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition : .2s linear;
+    font-family: 'Poppins', sans-serif;
+}
+body 
+{
+    /*overflow-x: hidden; */
+    background: linear-gradient(#2b1055,#7597de);
+    min-height: 100vh;
+}
+#header 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+#header .logo
+{
+    color: #FFFAE4;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+#header ul
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header ul li 
+{
+    list-style: none;
+    margin-left: 20px;
+}
+#header ul li a
+{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+}
+#header ul li a:hover,
+#header ul li a.active
+{
+    background: #CF9FFF;
+    color: #fff;
+}
+section 
+{
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #094b65,transparent);
+    z-index: 10;
+}
+section img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+section img#moon
+{
+    mix-blend-mode: screen;
+}
+section #text
+{
+    position: absolute;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: 9;
+    text-align: center;
+    line-height: 0.55em;
+    font-family: 'Rancho', cursive;
+    transform: translateY(-35%);
+}
+section #text span
+{
+    font-size: 0.20em;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-family: 'Jost', sans-serif;
+}
+#btn 
+{
+    
+        text-decoration: none;
+        display: inline-block;
+        padding: 8px 30px;
+        background: #fff;
+        color: #2b1055;
+        font-size: 1.2em;
+        font-weight: 500;
+        letter-spacing: 2px;
+        border-radius: 40px;
+        transform: translateY(100px);
+    
+}
+.sec 
+{
+    position: relative;
+    padding: 100px;
+    background: #094b65;
+}
+.sec h2{
+    font-size: 3.5em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.sec p 
+{
+    font-size: 1em;
+    color: #fff;
+}
+/*#body1
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container{
+    position: relative;
+    width: 1200px;
+    height: 300px;
+    margin: 240px auto;
+}
+
+.container.box{
+    position: relative;
+    width: calc(400px - 30px);
+    height: calc(300px - 30px);
+    background: #000;
+    float: left;
+    margin: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+}*/
+
+/*.wrapper{
+    /*margin: 10px auto;
+    padding: 0 10%;
+    padding-bottom: 10px;
+    text-transform: capitalize;
+    position: relative;
+    padding: 100px;
+    background: #094b65;
+}
+.wrapper h2{
+    font-size: 3.5em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.wrapper p 
+{
+    font-size: 1em;
+    color: #fff;
+}
+h1{
+    color: #fff;
+    font-size: 45px;
+    text-align: center;
+    padding-bottom: 15px;
+    text-shadow: 0 15px 10px rgba(0, 0, 0, 0.2);
+}*/
+
+
+
+.container{
+    position: relative;
+    background: linear-gradient(to top, #2b1055,transparent);
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit,minmax(270px, 1fr));
+}
+.container.box{
+    position: relative;
+    /*width: calc(400px - 30px);
+    height: calc(300px - 30px);*/
+    background: #ff0;
+    float: left;
+    margin: 15px;
+    box-sizing: border-box;
+    /*overflow: hidden;*/
+    border-radius: 10px;
+}
+.box{
+    height: 300px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    /*background: #CF9FFF;*/
+    /*box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);*/
+}
+/*.container.box.icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transition: 0.5s;
+    z-index: 1;
+}
+.container.box:hover .icon{
+top: 20px;
+right: calc(50% - 80px)
+}
+/*.box img{
+    height: 70px;
+}
+.box h3{
+    color: #444;
+    padding: 10px 0;
+    font-size: 20px;
+}
+.box p{
+    color: #777;
+    font-size: 14px;
+    line-height: 1.6;
+}*/
+
+/*body{
+    overscroll-behavior: auto;
+    overflow-y: auto;
+    margin: 0;
+    height: 90%;
+}*/
+/*.main{
+
+    position:fixed;
+    width:80%;
+    height:100%;
+    left:20%;
+    overflow:auto;
+    background:silver;
+    color:black;
+
+  } */
+  /*.c{
+    position:relative;
+    background:red;
+    max-height:225px;  /*height to show an exact number of spans  - in this case span is 45px (40 height plus 5 margin as margins collapse) and we are showing 5 spans to start */
+  /*  float:left;
+    width:315px;
+    height:225px;
+    overflow:hidden;
+    overflow-y:auto;
+  }
+  .card-home{
+    position:absolute;
+      top:0;
+        animation: scroll 10s linear 1s infinite;
+  }
+  span {
+    min-width:290px;
+    min-height:40px;
+    display:block;
+    color:white;
+    margin:5px;
+    background:blue;
+  }
+  @keyframes scroll {
+    95% { top: -100%; }
+    100% { top:0; }
+}*/
+/*
+<body scroll="no" style="overflow: hidden">*/
+
+/*body {
+    height: 100vh;
+    background-size: cover;
+    overflow-y: hidden; */
+   /* * {
+        max-width: 100%;
+        overflow-y: hidden;
+      }   
+.noscroll { 
+  overflow: hidden;
+}
+*/
+body{
+overscroll-behavior-y: none;
+}
+html {
+    margin: 0;
+    overscroll-behavior: none;
+  }
